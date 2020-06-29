@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker-compose --no-ansi -f {{ patchman_docker_compose_directory }}/docker-compose.yml exec patchman patchman -q -r -A -p -c -d -n
