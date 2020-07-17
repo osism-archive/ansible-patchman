@@ -10,7 +10,9 @@ services:
       - "{{ patchman_configuration_directory }}/patchman.env"
     volumes:
       - "{{ patchman_configuration_directory }}/local_settings.py:/etc/patchman/local_settings.py:ro"
-      - "/etc/hosts:/etc/hosts:ro"
+      - /etc/hosts:/etc/hosts:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
     ports:
       - "{{ patchman_host }}:{{ patchman_port }}:8000"
     depends_on:
