@@ -45,7 +45,7 @@ patchman_update_valid_time: 86400
 ##########################
 # postgres
 
-postgres_tag: 9.6-alpine
+postgres_tag: 12-alpine
 postgres_image: "{{ docker_registry }}/library/postgres:{{ postgres_tag }}"
 
 patchman_postgres_username: patchman
